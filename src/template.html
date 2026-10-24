@@ -255,7 +255,8 @@ function render() {
     h2 = `올해 손익이 <b>${fmtMan(b.realized)}</b>(손실)이라 세금이 없어요. 손실은 다음 해로 넘어가지 않으니, 이익 중인 종목이 있다면 손실만큼 + 공제 ${fmtMan(ded)}까지 이익을 실현해도 세금이 0원이에요.`;
   } else h2 = `올해 낼 양도세가 없어요${b.room > 0 ? `(공제 ${fmtMan(b.room)} 남음)` : ''}.`;
   $('r2').innerHTML = h2 + ` 파는 날이 아니라 <b>결제일</b>이 올해여야 하니, 증권사가 공지하는 '연내 결제 마지막 매도일'을 확인하세요. 다시 살 때는 사고팔 때 드는 수수료·환전 비용도 생각하세요.`
-    + `<br><a class="go" href="${H}overseas-stock-tax/" target="_blank" rel="noopener">해외주식 양도세 계산기에서 종목별로 →</a>`;
+    + `<br><a class="go" href="${H}overseas-stock-tax/" target="_blank" rel="noopener">해외주식 양도세 계산기에서 종목별로 →</a>`
+    + `<br><a class="go" href="${H}spouse-gift/" target="_blank" rel="noopener">많이 오른 종목은 배우자에게 증여하고 팔면? →</a>`;
 
   // 3. 금융소득
   const f = ytFin({ received: num('fin-got'), more: num('fin-more') }, R);
